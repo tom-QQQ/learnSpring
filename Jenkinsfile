@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                bat 'mvn --version'
+                echo '打印成功'
             }
         }
     }
