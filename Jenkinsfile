@@ -13,7 +13,10 @@ pipeline {
 
         stage('start') {
             steps {
-                bat 'java -jar .\spring\target\main.jar'
+                dir ('.\spring\target') {
+                    bat 'java -jar .\main.java'
+                }
+                // bat 'java -jar .\spring\target\main.jar'
             }
 
             post {
@@ -26,6 +29,5 @@ pipeline {
                 }
             }
         }
-
     }
 }
