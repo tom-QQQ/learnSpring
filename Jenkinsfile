@@ -13,7 +13,8 @@ pipeline {
 
         stage('start') {
             steps {
-                dir ('spring\\target') {
+                // 进入指定目录, 注意分隔符号
+                dir ('spring/target') {
                     bat 'java -jar main.java'
                 }
                 // bat 'java -jar spring\target\main.jar'
