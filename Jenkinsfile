@@ -14,9 +14,9 @@ pipeline {
         stage('start') {
             steps {
                 dir ('spring\target') {
-                    bat 'java -jar .\main.java'
+                    bat 'java -jar main.java'
                 }
-                // bat 'java -jar .\spring\target\main.jar'
+                // bat 'java -jar spring\target\main.jar'
             }
 
             post {
