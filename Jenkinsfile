@@ -7,7 +7,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'mvn --version'
-                powershell 'echo 测试'
+                powershell 'chcp'
                 echo '打印成功'
             }
         }
